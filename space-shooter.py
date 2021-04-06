@@ -15,6 +15,7 @@ while True:
             pygame.quit
             sys.exit()
             
+    screen.fill((42,45,51))        
     pygame.display.update()
     # Set frame rate
     clock.tick(120)
