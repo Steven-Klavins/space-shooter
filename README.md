@@ -2,6 +2,8 @@
 
 Space shooter is an asteroid shooting game built Python/PyGame, I built this whilst taking the [Introduction to game development in Python](https://www.udemy.com/course/an-introduction-to-game-development-in-python/) course.
 
+## Screenshot 
+
 ## Dependencies 
 * python3
 * pygame
