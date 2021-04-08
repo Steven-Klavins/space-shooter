@@ -15,7 +15,9 @@ class SpaceShip(pygame.sprite.Sprite):
         
     def screen_constrain(self):
         if self.rect.right >= 1280:
-            self.rect.right = 1280   
+            self.rect.right = 1280 
+        if self.rect.left <= 0:
+            self.rect.left = 0  
         
 
 # Initialize pygame at 720P
