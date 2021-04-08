@@ -12,7 +12,8 @@ class SpaceShip(pygame.sprite.Sprite):
     def update(self):
         self.rect.center = pygame.mouse.get_pos()
         self.screen_constrain()
-        
+
+# Create constraints left and right based on rect pos   
     def screen_constrain(self):
         if self.rect.right >= 1280:
             self.rect.right = 1280 
