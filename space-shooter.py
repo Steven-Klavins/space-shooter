@@ -7,9 +7,15 @@ class SpaceShip(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.image.load(path)
         self.rect = self.image.get_rect(center = (x_pos, y_pos))
-        
+
+# Update method sets spaceship rect center to match mouse pos    
     def update(self):
         self.rect.center = pygame.mouse.get_pos()
+        self.screen_constrain()
+        
+    def screen_constrain(self):
+        if self.rect.right >= 1280:
+            self.rect.right = 1280   
         
 
 # Initialize pygame at 720P
