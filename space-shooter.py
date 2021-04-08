@@ -7,6 +7,10 @@ class SpaceShip(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.image.load(path)
         self.rect = self.image.get_rect(center = (x_pos, y_pos))
+        
+    def update(self):
+        self.rect.center = pygame.mouse.get_pos()
+        
 
 # Initialize pygame at 720P
 pygame.init()
@@ -32,8 +36,11 @@ while True:
     screen.fill((42,45,51))  
     
     # Render spacship
-    spaceship_group.draw(screen)     
-          
+    spaceship_group.draw(screen) 
+    
+    # Use update method to move spaceship
+    spaceship_group.update()    
+    
     pygame.display.update()
     # Set frame rate
     clock.tick(120)
